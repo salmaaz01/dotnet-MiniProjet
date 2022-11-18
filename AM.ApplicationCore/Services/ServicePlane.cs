@@ -25,16 +25,31 @@ namespace AM.ApplicationCore.Services
             _unitOfWork.Repository<Plane>().Add(P);
         }
 
+        public void DeletePlanes()
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Plane> GetAll()
         {
             //return genericRepository.GetAll();
             return _unitOfWork.Repository<Plane>().GetAll();
         }
 
+        public IEnumerable<Flight> GetFlights(int n)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool IsAvailablePlane(Flight flight, int n)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Remove(Plane P)
         {
             //genericRepository.Delete(P);
-            _unitOfWork.Repository<Plane>().Delete(P);
+            _unitOfWork.Repository<Plane>().Delete(P); //hi
 
         }
     }

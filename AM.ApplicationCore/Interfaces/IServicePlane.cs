@@ -9,9 +9,17 @@ namespace AM.ApplicationCore.Interfaces
 {
     public interface IServicePlane
     {
-        void Add(Plane P);
-        void Remove(Plane P);
+        //void Add(Plane P);
+        //void Remove(Plane P);
         IEnumerable<Plane> GetAll();
+
+        IEnumerable<Flight> GetFlights(int n);
+
+        bool IsAvailablePlane(Flight flight, int n);
+
+        void DeletePlanes();
+
+
 
     }
 }
